@@ -13,9 +13,19 @@
     <div class="container">
 
      <div class="row">
+
         <div class="col-6">
 
-            <h3>1. Creating a component</h3>
+            <h3>Creating a component</h3>
+            <div x-data="{ title: 'Hello Alpine' }">
+                <p x-text="title"></p>
+            </div>
+
+        </div>
+
+        <div class="col-6">
+
+            <h3>Creating a component</h3>
             <div x-data="{ title: 'Hello Alpine' }">
             <p x-text="title"></p>
             <button @click="title='Alpine Rocks!'">click me</button>
@@ -23,8 +33,12 @@
 
         </div>
     
+     </div>
+
+    <div class="row">
+
         <div class="col-6">
-            <h3>2. Create a Counter Component</h3>
+            <h3>Create a Counter Component</h3>
             <div x-data="{ count: 1 }">
             <p x-text="count"></p>
             <button @click="count++">Count Up</button>
@@ -33,12 +47,9 @@
 
         </div>
 
-     </div>
-
-    <div class="row">
        <div class="col-6">
 
-        <h3>3. AlpineJS x-init</h3>
+        <h3>AlpineJS x-init</h3>
         <div x-data="{ countdown: 60 }"
          x-init="setInterval(function(){
                     countdown--;
@@ -49,62 +60,76 @@
 
        </div>
 
-    <div class="col-6">
-
-        <h3>4. AlpineJS x-show directive</h3>
-        <div x-data="{ show: false }">
-        <button @click="show=!show">Show</button>
-        <div x-show.transition="show">Hello</div>
-        <!-- <div x-show.transition="show"></div> -->
-    </div>
-    </div>
-
     </div>
 
     <div class="row">
+
         <div class="col-6">
-            <h3>5. AlpineJS x-model</h3>
+
+            <h3>AlpineJS x-show directive</h3>
+            <div x-data="{ show: false }">
+            <button @click="show=!show">Show</button>
+            <div x-show.transition="show">Hello</div>
+            <!-- <div x-show.transition="show"></div> -->
+        </div>
+
+        </div>
+
+        <div class="col-6">
+
+            <h3>AlpineJS x-model</h3>
         <div x-data="{ title: 'AlpineJS is Awesome' }">
         <p x-text="title"></p>
         <input type="text" x-model="title">
         </div>
-        </div>
 
-        <div class="col-6">
-            <h3>6. AlpineJS x-html</h3>
-        <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
-        <div x-html="code"></div>
-        </div>
         </div>
 
     </div>
 
     <div class="row">
+
         <div class="col-6">
-            <h3>7. AlpineJS x-ref</h3>
+
+            <h3>AlpineJS x-html</h3>
+        <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
+        <div x-html="code"></div>
+        </div>
+
+        </div>
+
+        <div class="col-6">
+
+            <h3>AlpineJS x-ref</h3>
     <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
         <div x-ref="sentence">I am a sentence</div>
         <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
     </div>
+
         </div>
 
-    <div class="col-6">
-        <h3>8. AlpineJS x-if</h3>
-    <div x-data="{ socks: 'blue' }">
-        <template x-if="socks=='blue'">
-            <p>My socks are blue</p>
-        </template>
-        <template x-if="socks=='green'">
-            <p>My socks are green</p>
-        </template>
-        <button @click="socks = 'green'">Change Sox</button>
-    </div>
-    </div>
     </div>
 
     <div class="row">
+
         <div class="col-6">
-            <h3>9. AlpineJS x-for</h3>
+
+            <h3>AlpineJS x-if</h3>
+        <div x-data="{ socks: 'blue' }">
+            <template x-if="socks=='blue'">
+                <p>My socks are blue</p>
+            </template>
+            <template x-if="socks=='green'">
+                <p>My socks are green</p>
+            </template>
+            <button @click="socks = 'green'">Change Sox</button>
+        </div>
+
+        </div>
+
+        <div class="col-6">
+
+            <h3>AlpineJS x-for</h3>
     <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">
         <p>Groceries</p>
         <ul>
@@ -113,6 +138,7 @@
             </template>
         </ul>
     </div>
+
         </div>
     </div>
 
