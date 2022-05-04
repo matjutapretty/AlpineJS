@@ -22,4 +22,7 @@ input {
     margin: 20px;
     padding: 20px;
 }
-
+h6 {
+    font-family: serif;
+    font-size: 10px;
+}
